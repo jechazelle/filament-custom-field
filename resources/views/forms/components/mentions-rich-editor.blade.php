@@ -1,6 +1,4 @@
-<div>
-    @include('filament-forms::components.rich-editor')
-</div>
+@include('filament-forms::components.rich-editor')
 
 @assets
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tributejs/3.3.2/tribute.min.js"></script>

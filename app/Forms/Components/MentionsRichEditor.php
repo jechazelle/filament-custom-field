@@ -2,7 +2,6 @@
 
 namespace App\Forms\Components;
 
-use Filament\Forms\Components\Field;
 use Filament\Forms\Components\RichEditor;
 
 class MentionsRichEditor extends RichEditor

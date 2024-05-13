@@ -7,6 +7,7 @@ use App\Forms\Components\MentionsRichEditor;
 use App\Models\Post;
 use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Placeholder;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Tabs;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -30,20 +31,20 @@ class PostResource extends Resource
         return $form
             ->schema([
                 /* State 1 */
-                MentionsRichEditor::make('content')
+                /*MentionsRichEditor::make('content')
                     ->mentionsItems(),
 
                 MentionsRichEditor::make('content2')
                     ->mentionsItems(),
 
                 MentionsRichEditor::make('content3')
-                    ->mentionsItems(),
+                    ->mentionsItems(),*/
 
 
                 /* State 2 */
 
 
-                /*Tabs::make('Tabs')
+                Tabs::make('Tabs')
                     ->tabs([
                         Tabs\Tab::make('Tab 1')
                             ->schema([
@@ -60,7 +61,7 @@ class PostResource extends Resource
                                 MentionsRichEditor::make('content3')
                                     ->mentionsItems(),
                             ]),
-                    ])->activeTab(2)*/
+                    ])->activeTab(2)
 
 
                 /* State 3 */
@@ -70,15 +71,15 @@ class PostResource extends Resource
                     ->tabs([
                         Tabs\Tab::make('Tab 1')
                             ->schema([
-                                MarkdownEditor::make('content'),
+                                RichEditor::make('content'),
                             ]),
                         Tabs\Tab::make('Tab 2')
                             ->schema([
-                                MarkdownEditor::make('content2'),
+                                RichEditor::make('content2'),
                             ]),
                         Tabs\Tab::make('Tab 3')
                             ->schema([
-                                MarkdownEditor::make('content3'),
+                                RichEditor::make('content3'),
                             ]),
                     ])->activeTab(2)*/
             ]);
