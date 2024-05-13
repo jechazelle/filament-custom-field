@@ -9,9 +9,10 @@ return new class extends Migration {
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('content');
-            $table->string('content2');
-            $table->string('content3');
+            $table->string('content')->default('');
+            $table->string('content2')->default('');
+            $table->string('content3')->default('');
+            $table->foreignId('user_id')->references('id')->on('users')->cascadeOnDelete();
             $table->timestamps();
         });
     }

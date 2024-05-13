@@ -6,15 +6,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tributejs/3.3.2/tribute.min.css" />
 @endassets
 
-@script
 <script>
-    console.log('ok');
-
     // Wait for the page to load before executing our code
     window.addEventListener('load', () => {
         // Get the component id, using the $getId() function of our RichEditor
         const id = '{{ $getId() }}';
-console.log(id);
+        console.log(id);
         // Create the Tribute instance
         const tribute = new Tribute({
             // The values are the users that can be mentioned, so we will get this list from the mentionsItems variable that we created before in our custom component
@@ -41,4 +38,3 @@ console.log(id);
         }
     });
 </script>
-@script
