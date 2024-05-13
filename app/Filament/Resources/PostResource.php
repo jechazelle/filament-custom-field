@@ -29,7 +29,21 @@ class PostResource extends Resource
     {
         return $form
             ->schema([
-                Tabs::make('Tabs')
+                /* State 1 */
+                MentionsRichEditor::make('content')
+                    ->mentionsItems(),
+
+                MentionsRichEditor::make('content2')
+                    ->mentionsItems(),
+
+                MentionsRichEditor::make('content3')
+                    ->mentionsItems(),
+
+
+                /* State 2 */
+
+
+                /*Tabs::make('Tabs')
                     ->tabs([
                         Tabs\Tab::make('Tab 1')
                             ->schema([
@@ -46,7 +60,11 @@ class PostResource extends Resource
                                 MentionsRichEditor::make('content3')
                                     ->mentionsItems(),
                             ]),
-                    ])->activeTab(2)
+                    ])->activeTab(2)*/
+
+
+                /* State 3 */
+
 
                 /*Tabs::make('Tabs')
                     ->tabs([
