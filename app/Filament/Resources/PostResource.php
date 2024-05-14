@@ -44,17 +44,17 @@ class PostResource extends Resource
                     ->tabs([
                         Tabs\Tab::make('Tab 1')
                             ->schema([
-                                MentionsRichEditor::make('content')
+                                RichEditor::make('content')
                                     ->mentionsItems(),
                             ]),
                         Tabs\Tab::make('Tab 2')
                             ->schema([
-                                MentionsRichEditor::make('content2')
+                                RichEditor::make('content2')
                                     ->mentionsItems(),
                             ]),
                         Tabs\Tab::make('Tab 3')
                             ->schema([
-                                MentionsRichEditor::make('content3')
+                                RichEditor::make('content3')
                                     ->mentionsItems(),
                             ]),
                     ])
