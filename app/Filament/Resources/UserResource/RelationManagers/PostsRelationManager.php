@@ -4,6 +4,8 @@ namespace App\Filament\Resources\UserResource\RelationManagers;
 
 use App\Forms\Components\MentionsRichEditor;
 use Filament\Forms;
+use Filament\Forms\Components\MarkdownEditor;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Tabs;
 use Filament\Forms\Form;
 use Filament\Resources\RelationManagers\RelationManager;
@@ -20,24 +22,8 @@ class PostsRelationManager extends RelationManager
     {
         return $form
             ->schema([
-                Tabs::make('Tabs')
-                    ->tabs([
-                        Tabs\Tab::make('Tab 1')
-                            ->schema([
-                                MentionsRichEditor::make('content')
-                                    ->mentionsItems(),
-                            ]),
-                        Tabs\Tab::make('Tab 2')
-                            ->schema([
-                                MentionsRichEditor::make('content2')
-                                    ->mentionsItems(),
-                            ]),
-                        Tabs\Tab::make('Tab 3')
-                            ->schema([
-                                MentionsRichEditor::make('content3')
-                                    ->mentionsItems(),
-                            ]),
-                    ])
+                RichEditor::make('content'),
+                MarkdownEditor::make('content2')
             ]);
     }
 

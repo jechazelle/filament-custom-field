@@ -40,24 +40,8 @@ class PostResource extends Resource
                     ->required()
                     ->allowHtml(),
 
-                Tabs::make('Tabs')
-                    ->tabs([
-                        Tabs\Tab::make('Tab 1')
-                            ->schema([
-                                RichEditor::make('content')
-                                    ->mentionsItems(),
-                            ]),
-                        Tabs\Tab::make('Tab 2')
-                            ->schema([
-                                RichEditor::make('content2')
-                                    ->mentionsItems(),
-                            ]),
-                        Tabs\Tab::make('Tab 3')
-                            ->schema([
-                                RichEditor::make('content3')
-                                    ->mentionsItems(),
-                            ]),
-                    ])
+                RichEditor::make('content'),
+                MarkdownEditor::make('content2')
             ]);
     }
 
